@@ -1,0 +1,118 @@
+npx sequelize-cli model:generate --name user --attributes email:string,password:string,name:string,status:string
+
+
+npx sequelize-cli model:generate --name profile --attributes phone:string,gender:string,address:text,idUser:integer
+
+
+npx sequelize-cli model:generate --name product --attributes name:string,desc:text,price:bigint,image:string,qty:integer,idUser:integer
+
+
+npx sequelize-cli model:generate --name transaction --attributes idProduct:integer,idBuyer:integer,idSeller:integer,price:bigint,status:string
+
+
+npx sequelize-cli model:generate --name category --attributes name:string
+
+
+npx sequelize-cli model:generate --name categoryProduct --attributes idProduct:integer,idCategory:integer
+
+
+-----------------------------------------------------------------
+{
+    "email" : "test@mail.com",
+    "password" : "123456",
+    "name" : "test",
+    "status" : "customer"
+}
+
+{
+    "email" : "my@mail.com",
+    "password" : "123456",
+    "name" : "myyy",
+    "status" : "customer"
+}
+
+{
+    "phone" : "08098999",
+    "gender" : "Laki-Laki",
+    "address" : "test. . . . ",
+    "idUser" : "1"
+}
+
+{
+    "phone" : "0242342342342",
+    "gender" : "Perempuan",
+    "address" : "coding. . . . ",
+    "idUser" : "2"
+}
+-----------------------------------------------------------------
+Product
+
+{
+    "name": "keyboard",
+    "desc": "bagus",
+    "price": "200000000",
+    "image": "keyboard.png",
+	"qty": "100",
+	"idUser": "2"
+}
+
+{
+	"name" : "mouse",
+    	"desc" : "unik",
+    	"price" : "3424000000",
+    	"image" : "mouse.png",
+	"qty" : "210",
+	"idUser" : "2"
+			
+}
+-----------------------------------------------------------------
+{
+
+    	"desc" : "mahal"		
+}
+
+-----------------------------------------------------------------
+Category
+
+{
+
+    	"name" : "Technology"		
+}
+
+{
+
+    	"name" : "Cosmetic"		
+}
+
+{
+
+    	"name" : "Office Stationery"		
+}
+
+{
+
+    	"name" : "Food"		
+}
+
+{
+
+    	"name" : "Gaming Gear"		
+}
+-----------------------------------------------------------------
+
+categoryproduct
+
+{
+    "idProduct":"1",
+    "idCategory":"1"
+}
+
+{
+    "idProduct":"1",
+    "idCategory":"5"
+}
+
+{
+    "idProduct":"2",
+    "idCategory":"1"
+}
